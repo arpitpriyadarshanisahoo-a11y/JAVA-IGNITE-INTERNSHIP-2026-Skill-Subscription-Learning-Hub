@@ -1,12 +1,11 @@
 package com.skills.hub.service;
 
-import com.skills.hub.model.Subscription;
+import com.skills.hub.entity.Subscription;
 
 import java.util.List;
 
 public interface SubscriptionService {
-
-    Subscription subscribe(Long userId, Long packId);
-
-    List<Subscription> getUserSubscriptions(Long userId);
+    List<Subscription> getAll();
+    Subscription save(Subscription subscription);
+    void deleteById(Long id);
 }
